@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Full Time Free Time</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="crashCourseCalc.js"></script>
+    <script src="resultScroll.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="FTFT_style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/FTFT_logo.ico">
+</head>
+<body>
+    <div id="hero">
+        <div id="logoText">
+            <h1 id="logoTextRegularHighlight">Full</h1>
+            <h1 id="logoTextRegular">Time</h1>
+            <h1 id="logoTextItalicHighlight">Free</h1>
+            <h1 id="logoTextItalic">Time</h1>
+        </div>
+        <h3>Achieve financial freedom and stop trading your time for money</h3>
+    </div>
+	<div id ="content">
+        <div id="header">
+            <h1 id="headerSubject">Crash Course</h1>
+            <h1 id="headerDescription">Can I FI:RE?</h1>
+        </div>
+        <div class="splitContentArea">
+            <div class="splitColumn">
+                <div class="outlineCard">
+                    <h1>What is financial independence?</h1>
+                    <p>Financial independence is having enough investment income to cover your cost of living without a job. FI:RE requires building a large enough portfolio to sustainably draw income from investments forever, instead of the conventional retirement strategy of drawing down money as you age.</p>
+                </div>
+                <div class="outlineCard">
+                    <h1>What is early retirement?</h1>
+                    <p>Early retirement refers to the choice to retire before the traditional retirement age of 65, enabled by the income generated from your investments and assets.</p>
+                </div>
+                <div class="outlineCard">
+                    <h1>Is it possible for me?</h1>
+                    <p>Achieving financial independence takes a combination of strong income and deep motivation to build a substantial nest egg through disciplined saving, investing, and lifestyle choices. Use the calculator to determine when you could FI:RE based on your financial situation.</p>
+                </div>
+            </div>
+            <div class="splitColumn">
+                <div class="calcInput">
+                    <div class="calcInputText">
+                        <h1>What is your current net worth?</h1>
+                        <p>All liquid assets (stocks, bonds, cash) minus all debt</p>
+                    </div>
+                    <div class="calcInputValue">
+                        <h1>$</h1>
+                        <input type="number" id="net-worth-input"><br><br>
+                    </div>
+                </div>
+                <div class="calcInput">
+                    <div class="calcInputText">
+                        <h1>What is your annual income?</h1>
+                        <p>Enter your take-home pay AFTER tax</p>
+                    </div>
+                    <div class="calcInputValue">
+                        <h1>$</h1>
+                        <input type="number" id="annual-income-input"><br><br>
+                    </div>
+                </div>
+                <div class="calcInput">
+                    <div class="calcInputText">
+                        <h1>What are your annual expenses?</h1>
+                        <p>Include everything you regularly spend money on</p>
+                    </div>
+                    <div class="calcInputValue">
+                        <h1>$</h1>
+                        <input type="number" id="annual-expenses-input"><br><br>
+                    </div>
+                </div>
+                <div class="calcInput">
+                    <div class="calcInputText">
+                        <h1>Rate of Return</h1>
+                        <p>The total stock market historical return is about 7% after inflation</p>
+                    </div>
+                    <div class="calcInputValue">
+                        <h1 id="calcPercent">%</h1>
+                        <input type="number" id="rate-of-return-input"><br><br>
+                    </div>
+                </div>
+                <button id="calculateButton" onclick="crashCourseCalc(); resultScroll();">Calculate your FI:RE path</button>
+            </div>
+        </div>
+        <div id="calcResults">
+            <hr>
+            <h1 class ='contentHeader'>Your FI:RE Path</h1>
+            <div id="result-container"></div>
+            <h2 class = 'graphHeader'>Your Net Worth Over Time</h2>
+        </div>
+        <div id="portfolio-graph"></div>
+    </div>
+    <div id="footer">
+        <div id="footerContent">
+            <div id="footerCTA">
+                <h1>Did you find the site helpful?</h1>
+                <div id="footerCTAButtons">
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=QV6EU2K6X7X3Y" target="_blank">
+                        <button id="donate">
+                            <img src="assets/giftcard_24px.svg">
+                            <h1>Buy the creator a coffee</h1>
+                        </button>
+                    </a>  
+                    <a href="mailto:zack.w.ewing@gmail.com">
+                        <button id ="contact">
+                        <img src="assets/email_24px.svg">
+                        <h1>Get in touch</h1>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <p class="footerDisclaimer">All Content on this site is information of a general nature and does not address the circumstances of any particular individual or entity. Nothing in the Site constitutes professional and/or financial advice, nor does any information on the Site constitute a comprehensive or complete statement of the matters discussed or the law relating thereto.The content of this site is for informational purposes only.</p>
+            <p class="footerDisclaimer">Nothing contained on our Site constitutes a solicitation, recommendation, endorsement, or offer to buy or sell any securities or other financial instruments.</p>
+        </div>
+    </div>
+</body>
+</html>
